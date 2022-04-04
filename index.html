@@ -268,7 +268,7 @@
                     </div>
                 </div>
                 <div class="botaofechar">
-                    <button class="whatsapp bold">Tudo certo, pode pedir!</button>
+                    <button class="whatsapp bold" onclick="mandaprozap()">Tudo certo, pode pedir!</button>
                     <button class="cancelar bold" onclick="esconder()">Cancelar</button>
                 </div>
             </div>
@@ -284,7 +284,7 @@
         let soma =0;
         
         function selecaoprato (prato) {
-            const pratoescolhido = document.querySelector(".selecionado");
+            const pratoescolhido = document.querySelector(".pratos .selecionado");
             if (pratoescolhido !== null) {
                 pratoescolhido.classList.remove("selecionado");
             }
@@ -333,16 +333,21 @@
                 document.querySelector(".teste").classList.remove("esconder");
                 document.querySelector(".comida").textContent=pratoselecionado;
                 console.log(pratoselecionado);
-                document.querySelector(".comidav").innerHTML=`R$ ${valorp}`;
+                document.querySelector(".comidav").innerHTML=`R$ ${valorp.toFixed(2)}`;
                 document.querySelector(".bebida").innerHTML=bebidaselecionada;
-                document.querySelector(".bebidav").innerHTML=`R$ ${valorb}`;
+                document.querySelector(".bebidav").innerHTML=`R$ ${valorb.toFixed(2)}`;
                 document.querySelector(".ordenados").querySelector(".sobremesaord").innerHTML=sobremesaselecionada;
-                document.querySelector(".ordenados").querySelector(".sobremesav").innerHTML=`R$ ${valors}`;
-                document.querySelector(".soma").innerHTML=`R$ ${soma}`;
+                document.querySelector(".ordenados").querySelector(".sobremesav").innerHTML=`R$ ${valors.toFixed(2)}`;
+                document.querySelector(".soma").innerHTML=`R$ ${soma.toFixed(2)}`;
             }
         }
         function esconder() {
             document.querySelector(".teste").classList.add("esconder");
+        }
+        function mandaprozap () {
+            const descrição = `Olá, gostaria de fazer o pedido\n- Prato: ${pratoselecionado}\n- Bebida: ${bebidaselecionada}\n- Sobremesa: ${sobremesaselecionada}/nTotal: R$ 27.70`;
+            const urlZap = `https://wa.me/5521963129999?text=${encodeURIComponent(descrição)}`;
+            window.open(urlZap);
         }
     </script>
 </body>
