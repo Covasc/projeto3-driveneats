@@ -23,70 +23,70 @@
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">19.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">20.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">21.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">22.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">23.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">24.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">22.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">22.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">22.90</spam></p>
             </div>
             <div class="prato" onclick="selecaoprato(this)">
                 <div><img src="/projeto3-driveneats/Imagens/strogonoff.jpg">
                 </div>
-                <p class="item">Strogonoff do bão</p> 
+                <p class="item">Strogonoff do bao</p> 
                 <p class="descrição">Strogonoff de frango com champignon, arroz e batata palha teste teste teste teste teste </p>
                 <p class="valor"><spam>R$ </spam><spam class="preco">22.90</spam></p>
             </div>
@@ -259,7 +259,7 @@
                         <p class="bebidav">ValorB</p>
                     </div>
                     <div>
-                        <p class="sobremesa">Sobremesa</p>
+                        <p class="sobremesaord">Sobremesa</p>
                         <p class="sobremesav">ValorS</p>
                     </div>
                     <div>
@@ -275,11 +275,11 @@
         </div>
     </div>
     <script>
-        let prato;
+        let pratoselecionado;
         let valorp = 0;
-        let bebida;
+        let bebidaselecionada;
         let valorb = 0;
-        let sobremesa;
+        let sobremesaselecionada;
         let valors = 0;
         let soma =0;
         
@@ -289,10 +289,11 @@
                 pratoescolhido.classList.remove("selecionado");
             }
             prato.classList.add("selecionado");
-            valorp = Number(document.querySelector(".selecionado").querySelector(".preco").innerHTML);
+            valorp = Number(prato.querySelector(".preco").innerHTML);
             console.log(valorp);
-            prato = document.querySelector(".selecionado").querySelector(".item").innerHTML;
+            pratoselecionado = prato.querySelector(".item").innerHTML;
             console.log(prato);
+            trocapraverde();
         }
         function selecaobebida (bebida) {
             const bebidaescolhida = document.querySelector(".bebidas").querySelector(".selecionado");
@@ -300,10 +301,11 @@
                 bebidaescolhida.classList.remove("selecionado");
             }
             bebida.classList.add("selecionado");
-            valorb = Number(document.querySelector(".bebidas").querySelector(".selecionado").querySelector(".preco").innerHTML);
+            valorb = Number(bebida.querySelector(".preco").innerHTML);
             console.log(valorb);
-            bebida = document.querySelector(".bebidas").querySelector(".selecionado").querySelector(".item").innerHTML;
+            bebidaselecionada = bebida.querySelector(".item").innerHTML;
             console.log(bebida);
+            trocapraverde();
         }
         function selecaosobremesa (sobremesa) {
             const sobremesaescolhida = document.querySelector(".sobremesa").querySelector(".selecionado");
@@ -311,27 +313,32 @@
                 sobremesaescolhida.classList.remove("selecionado");
             }
             sobremesa.classList.add("selecionado");
-            valors = Number(document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".preco").innerHTML);
+            valors = Number(sobremesa.querySelector(".preco").innerHTML);
             console.log(valors);
-            sobremesa = document.querySelector(".sobremesa").querySelector(".selecionado").querySelector(".item").innerHTML;
+            sobremesaselecionada = sobremesa.querySelector(".item").innerHTML;
             console.log(sobremesa);
+            trocapraverde();
+        }
+        function trocapraverde() {
             if (valorp!==0 && valorb!==0 && valors!==0) {
-            document.querySelector(".cinza").classList.add("verde");
-            document.querySelector(".verde").innerHTML = "Fechar Pedido";
+                document.querySelector(".cinza").classList.add("verde");
+                document.querySelector(".verde").innerHTML = "Fechar Pedido";
+                console.log(valorp, valorb, valors)
             }
         }
         function concluirpedido () {
             if (valorp!==0 && valorb!==0 && valors!==0) {
-                soma=valorp+valorb+valors;
+                console.log(pratoselecionado, bebidaselecionada, sobremesaselecionada)
+                soma=valorp+valorb+valors;    
                 document.querySelector(".teste").classList.remove("esconder");
-                console.log(prato);
-                document.querySelector(".comida").innerHTML=prato;
-                document.querySelector(".comidav").innerHTML=valorp;
-                document.querySelector(".bebida").innerHTML=bebida;
-                document.querySelector(".bebidav").innerHTML=valorb;
-                document.querySelector(".ordenados").querySelector(".sobremesa").innerHTML=sobremesa;
-                document.querySelector(".ordenados").querySelector(".sobremesav").innerHTML=valors;
-                document.querySelector(".comida").innerHTML=soma;
+                document.querySelector(".comida").textContent=pratoselecionado;
+                console.log(pratoselecionado);
+                document.querySelector(".comidav").innerHTML=`R$ ${valorp}`;
+                document.querySelector(".bebida").innerHTML=bebidaselecionada;
+                document.querySelector(".bebidav").innerHTML=`R$ ${valorb}`;
+                document.querySelector(".ordenados").querySelector(".sobremesaord").innerHTML=sobremesaselecionada;
+                document.querySelector(".ordenados").querySelector(".sobremesav").innerHTML=`R$ ${valors}`;
+                document.querySelector(".soma").innerHTML=`R$ ${soma}`;
             }
         }
         function esconder() {
